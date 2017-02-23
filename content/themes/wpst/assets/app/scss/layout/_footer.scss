@@ -1,0 +1,77 @@
+/**
+ * Title:
+ *    Footer
+ * Description:
+ *    Used to define the sites main footer at the bottom of the page.
+ *    Don't use this as a place to put generic <footer> tags.
+ * Sections:
+ *    $. Footer
+ *    $. Copyright
+ */
+
+
+
+/* $. Footer
+\*----------------------------------------------------------------*/
+
+footer {
+    @extend %cf;
+    position: relative;
+    width: 100%;
+    background-color: $color-brand;
+    padding: $base;
+}
+
+.footer--main {
+    @include respond-min($bp2) {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.footer__icons {
+    float: right;
+
+    li {
+        margin-bottom: 0;
+    }
+
+    a {
+        margin-right: $base;
+        margin-bottom: 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.footer__contact {
+    float: left;
+}
+
+.footer__item {
+    float: left;
+}
+
+.footer__text {
+    color: $white;
+    opacity: .6;
+    padding-left: $base;
+    text-transform: uppercase;
+    margin-top: $base/5;
+    display: none;
+
+    @include respond-min($bp2) {
+        display: block;
+    }
+}
+
+
+/* $. Copyright
+\*----------------------------------------------------------------*/
+
+.copyright {
+    @extend %cf;
+}

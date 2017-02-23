@@ -1,0 +1,88 @@
+/**
+ * Title:
+ *    Icon Module
+ * Description:
+ *    Responsible for all sizes and styling of Grunticon based icons
+ * Sections:
+ *    $. Setup
+ *    $. Base
+ *    $. Variations
+ *
+ * TODO:
+ *    - Change .svg sizes based on this file for better IE8 support
+ */
+
+
+
+/* $. Setup
+\*----------------------------------------------------------------*/
+
+@mixin icon-size( $size ) {
+    width: $size;
+    height: $size;
+}
+
+
+/* $. Base
+\*----------------------------------------------------------------*/
+
+.icon {
+    @include icon-size($icon);
+    display: inline-block;
+    background-size: cover;
+}
+
+
+
+/* $. Variations
+\*----------------------------------------------------------------*/
+
+/* Generic sizing */
+.icon--small { @include icon-size($icon-small); }
+.icon--medium { @include icon-size($icon-medium); }
+.icon--large { @include icon-size($icon-large); }
+.icon--xlarge { @include icon-size($icon-xlarge); }
+
+/* Styling */
+.icon--transparent { opacity: .3; filter: alpha(opacity=30); }
+
+/* Logos */
+.icon--logo {
+    /* 33% */
+    width: 48px;
+    height: 48px;
+
+    /* 50% */
+    @include respond-min($bp1) {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* 100% */
+    @include respond-min($bp4) {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.icon--logo-header {
+    /* 33% */
+    width: 283px;
+    height: 31px;
+    
+    /* 40% */
+    @include respond-min($bp1) {
+        width: 441px;
+        height: 49px;   
+    }
+    /* 50% */
+    @include respond-min($bp2) {
+        width: 588px;
+        height: 66px;   
+    }
+    /* 100% */
+    @include respond-min($bp4) {
+        width: 980px;
+        height: 110px;   
+    }
+}

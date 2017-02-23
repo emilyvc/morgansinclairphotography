@@ -1,0 +1,105 @@
+/**
+ * Title:
+ *    Header
+ * Description:
+ *    Header layout module, used to define the header at the top of each page.
+ *    This could be used in combination with other components to create a
+ *    fully-fledged design.
+ * Sections:
+ *    $. Base
+ *    $. Logo
+ *    $. Nav
+ *    $. Toggle
+ *    $. Search
+ */
+
+
+
+/* $. Base
+\*----------------------------------------------------------------*/
+
+.header {
+    @extend %cf;
+    position: relative;
+    width: 100%;
+    background-color: $black;
+    padding: $base*2;
+    z-index: $z-index-3;
+
+    @include respond-min($bp3) {
+        position: absolute;
+        width: 100%;
+        padding-bottom: $base/2;
+        padding-top: 0;
+    }
+}
+
+/* $. Wrapper
+\*----------------------------------------------------------------*/
+
+.header--main {
+    padding: $base*2.3;
+    position: relative;
+    @include respond-min($bp3) {
+        padding-top: $base;
+        padding-bottom: $base/2;
+    }
+}
+
+/* $. Logo
+\*----------------------------------------------------------------*/
+
+.header__logo {
+    position: absolute;
+    margin: 0 auto;
+    transform: translateX(-50%);
+    display: block;
+    z-index: $z-index-4;
+     left: 50%;
+    top: 15%;
+
+
+    @include respond-min($bp3) {
+        position: relative;
+        top: auto;
+        transform: none;
+        left: auto;
+    }
+}
+
+.is-active-nav .header__logo  {
+        position: fixed;
+        top: 1.2%;
+    }
+
+/* $. Nav
+\*----------------------------------------------------------------*/
+
+.header__nav {
+    display: none;
+    background-color: $black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    width: 100%;
+    overflow-y: auto;
+    height: 100%;
+    z-index: $z-index-3;
+
+    .is-active-nav & {
+        display: block;
+    }
+
+    @include respond-min($bp3) {
+        display: block;
+        position: static;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        overflow-y: visible;
+        background-color: inherit;
+    }
+}
