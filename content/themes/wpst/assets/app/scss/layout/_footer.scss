@@ -18,17 +18,10 @@ footer {
     @extend %cf;
     position: relative;
     width: 100%;
-    background-color: $color-brand;
+    background-color: $white;
     padding: $base;
 }
 
-.footer--main {
-    @include respond-min($bp2) {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-    }
-}
 
 .footer__icons {
     float: right;

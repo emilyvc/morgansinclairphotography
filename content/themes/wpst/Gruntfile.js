@@ -20,7 +20,7 @@ module.exports = function( grunt ) {
     var dirs = {
         assets_input: 'assets/app',
         assets_output: 'assets/dist',
-        components: 'components',
+        components: 'bower_components',
         modules: 'node_modules'
     }
 
@@ -48,12 +48,12 @@ module.exports = function( grunt ) {
                     '<%= dirs.assets_output %>/js/main.min.js': [
                         '<%= dirs.assets_output %>/grunticon/grunticon.loader.js',
                         '<%= dirs.assets_input %>/js/partials/custom-select.js',
-                        '<%= dirs.modules %>/slick-carousel/slick/slick.js',
                         '<%= dirs.assets_input %>/js/main.js'
                     ],
                     '<%= dirs.assets_output %>/js/head.min.js': [
-                        '<%= dirs.modules %>/jquery/dist/jquery.js',
+                        '<%= dirs.modules %>/jquery/dist/jquery.min.js',
                         '<%= dirs.assets_input %>/js/vendors/modernizr.js',
+                          '<%= dirs.components %>/slick-carousel/slick/slick.min.js',
                         '<%= dirs.assets_input %>/js/head.js'
                     ]
                 }

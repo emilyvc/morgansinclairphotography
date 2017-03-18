@@ -52,10 +52,7 @@
 /* $. Interface - Project specific objects i.e. .work, .product, etc
 \*----------------------------------------------------------------*/
 
-@import "interface/section";
-@import "interface/breadcrumb";
-@import "interface/pagination";
-@import "interface/video";
+@import "interface/box";
 @import "interface/header";
 @import "interface/toggle";
 @import "interface/gallery";

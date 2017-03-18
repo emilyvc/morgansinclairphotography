@@ -9,17 +9,13 @@
  *
  */
 
-$gallery = get_field('gallery_images');
+$gallery = get_field('project_gallery');
 
 if($gallery) :
 ?>
-    <ul class="gallery-list">
-        <?php foreach($gallery as $k => $gallery_item) : ?>
-            <li class="gallery-list__item">
-                <a href="#" class="gallery-list__link | js-toggle-gallery" id="<?php echo $k; ?>">
-                    <img src="<?php echo $gallery_item['gallery_image']['sizes']['medium']; ?>" alt="<?php echo $gallery_item['caption']; ?>" class="gallery-list__image">
-                </a>
-            </li>
+    <div class="slideshow">
+        <?php foreach($gallery as $slide) : ?>
+            <img src="<?php echo $slide['gallery_image']['sizes']['gallery']; ?>" alt="<?php echo $slide['caption']; ?>" class="gallery__image">
         <?php endforeach; ?>
-    </ul>
+    </div>
 <?php endif; ?>

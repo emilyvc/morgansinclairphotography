@@ -40,7 +40,7 @@
     <![endif]-->
 
     <!-- @font-face declarations -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
     <!-- Scripts -->
     <noscript><link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/grunticon/icons.fallback.css" rel="stylesheet"></noscript>
@@ -48,4 +48,4 @@
     <!-- wp_head -->
     <?php wp_head(); ?>
 </head>
-<body>
+<body class="debug">

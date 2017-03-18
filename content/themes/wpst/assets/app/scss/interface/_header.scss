@@ -22,55 +22,34 @@
     @extend %cf;
     position: relative;
     width: 100%;
-    background-color: $black;
+    background-color: $white;
     padding: $base*2;
     z-index: $z-index-3;
 
     @include respond-min($bp3) {
-        position: absolute;
         width: 100%;
-        padding-bottom: $base/2;
-        padding-top: 0;
+        padding: $base*1.5 0;
     }
 }
 
 /* $. Wrapper
 \*----------------------------------------------------------------*/
 
-.header--main {
-    padding: $base*2.3;
-    position: relative;
-    @include respond-min($bp3) {
-        padding-top: $base;
-        padding-bottom: $base/2;
+.header__title {
+    display: block;
+    float: left;
+    color: $color-brand;
+
+    &:hover {
+        color: darken($color-brand, 10%);
     }
 }
+
+
 
 /* $. Logo
 \*----------------------------------------------------------------*/
 
-.header__logo {
-    position: absolute;
-    margin: 0 auto;
-    transform: translateX(-50%);
-    display: block;
-    z-index: $z-index-4;
-     left: 50%;
-    top: 15%;
-
-
-    @include respond-min($bp3) {
-        position: relative;
-        top: auto;
-        transform: none;
-        left: auto;
-    }
-}
-
-.is-active-nav .header__logo  {
-        position: fixed;
-        top: 1.2%;
-    }
 
 /* $. Nav
 \*----------------------------------------------------------------*/

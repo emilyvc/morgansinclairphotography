@@ -2,23 +2,27 @@
 
 /**
  ***************************************************************************
- * Front Page Template
+ * Example Custom Template
  ***************************************************************************
  *
- * This template is used to show the front page of a WordPress website,
- * regardless of whether or not its a Static Page or Posts landing.
- * More info can be found here:
- * http://codex.wordpress.org/Creating_a_Static_Front_Page
+ * All custom templates should be prefixed with `tpl-` for navigation
+ * purposes. To associate this template with WordPress, write the
+ * template name underneath like so.
+ *
+ * Template Name: Gallery
  *
  */
+
 
 
 // Get the header
 get_header();
 
 ?>
+
 <main class="main">
    <?php get_template_part('views/globals/project-loop'); ?>
 </main>
+
 
 <?php get_footer(); ?>

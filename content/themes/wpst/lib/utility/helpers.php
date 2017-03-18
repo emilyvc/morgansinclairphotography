@@ -43,3 +43,4 @@ function wpst_get_excerpt_by_id ( $id ) {
     return $excerpt;
 }
 
+

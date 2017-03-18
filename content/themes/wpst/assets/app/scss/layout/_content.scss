@@ -22,3 +22,11 @@
     a:not(.btn) {
     }
 }
+
+.main {
+    background-color: $grey-lighter;
+}
+
+.section {
+    padding: $base*2 0;
+}

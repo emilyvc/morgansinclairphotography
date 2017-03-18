@@ -1,5 +1,5 @@
-<footer <?php echo !is_front_page() ? ' ' : 'class="footer--main"'; ?>>
-    <div class="container <?php echo !is_front_page() ? 'container--small' : ''; ?>">
+<footer>
+    <div class="container">
         <ul class="list--unset | footer__icons">
             <a href="https://www.instagram.com/jakefogarty"><li class="icon icon--medium icon--instagram"></li></a>
             <a href="https://www.facebook.com/JFogartydrumtuition"><li class="icon icon--medium icon--facebook"></li></a>

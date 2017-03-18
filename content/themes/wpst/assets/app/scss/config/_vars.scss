@@ -17,10 +17,10 @@
 /* $. Breakpoints
 \*----------------------------------------------------------------*/
 
-$bp1: 30em;
-$bp2: 48em;
-$bp3: 62em;
-$bp4: 78em;
+$bp1: 32em;
+$bp2: 45em;
+$bp3: 55em;
+$bp4: 75em;
 $bp5: 92em;
 
 
@@ -61,7 +61,7 @@ $color-text:          $grey-dark;
 $color-background:    $white;
 
 /* palette */
-$color-brand:    #552D2D;
+$color-brand:    $grey-dark;
 
 /* states */
 $color-success:       #2ECC71;
@@ -72,9 +72,9 @@ $color-error:         #E74C3C;
 /* $. Typography
 \*----------------------------------------------------------------*/
 
-$font: 'Montserrat', Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+$font: "Source Sans Pro", Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 
-$weight-thin:  300;
+$weight-thin:  100;
 $weight-medium:  500;
 $weight-bold:    700;
 

@@ -21,10 +21,6 @@
      * Set variable to pool DOM only once.
      */
     var body            = $('body');
-    var toggleGallery   = $('.js-toggle-gallery');
-    var closeGallery    = $('.js-close-gallery');
-    var gallery         = $('.js-gallery');
-    var albums         = $('.js-albums');
 
     /**
      * Setup 'CustomSelect' plugin on all Select elements
@@ -43,71 +39,25 @@
         $(this).toggleClass('icon--menu-open').toggleClass('icon--menu-close');
     });
 
-   /**
-    * Create new gallery instance for Gallery
-    */
-   
-   // On before slide change
-   gallery.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-     console.log(nextSlide);
-   });
 
    /**
     * Toggle Gallery
     */
-   toggleGallery.on('click', function(e) {
-       var skipToSlide = $(this).attr("id");
-       body.toggleClass('is-active-gallery');
-
-       gallery.slick({
+       $('.slideshow').slick({
            arrows: true,
            fade: true,
            appendArrows: $('.gallery__nav'),
-           prevArrow: '<span class="icon icon--prev | gallery__nav-left"></span>',
-           nextArrow: '<span class="icon icon--next | gallery__nav-right"></span>',
-           infinite: true,
-           lazyLoad: 'progressive',
-           // respondTo: 'slider'
+           prevArrow: '<span class="icon icon--medium icon--prev | gallery__nav-left"></span>',
+           nextArrow: '<span class="icon icon--medium icon--next | gallery__nav-right"></span>',
+        infinite: true,
+        speed: 500,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        cssEase: 'linear'
        });
-   
-       console.log(" Skip to slide number " + skipToSlide);
-       gallery.slick('slickGoTo', skipToSlide, 1);
+   })
 
-       e.preventDefault();
-   });
-
-
-   /**
-    * Close Product Gallery with general click outside element
-    */
-   if(closeGallery.length) {
-       $('body').on('mouseenter', '.gallery__container', function(e) {
-            $(this).closest('.mixd-gallery').removeClass('is-hover');
-        });
-        $('body').on('mouseleave', '.gallery__container', function(e) {
-            $(this).closest('.mixd-gallery').addClass('is-hover');
-        });
-        $('body').on('click', '.mixd-gallery.is-hover', function(e) {
-            body.toggleClass('is-active-gallery');
-            gallery.slick('unslick');
-            e.preventDefault();
-        });
-   }
-
-    /**
-     * Create new gallery instance for Gallery
-     */
-    albums.slick({
-      autoplay: true,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      arrows: false,
-      dots: true
-    });
-
-
-})(jQuery);
+(jQuery);
 
 
 

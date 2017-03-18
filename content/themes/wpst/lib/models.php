@@ -20,7 +20,7 @@
  * $. Post types
  ******************************************************************************/
 
-//require_once( 'models/post-types/public.php' );
+require_once( 'models/post-types/projects.php' );
 //require_once( 'models/post-types/private.php' );
 
 
