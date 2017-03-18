@@ -50,7 +50,16 @@ $color-nav: $color-link;
 \*----------------------------------------------------------------*/
 
 .nav--primary {
-    float: right;
+    text-align: center;
+    padding-top: $base;
+
+     @include respond-min($bp2) {
+        padding-top: $base*4;
+    }
+    @include respond-min($bp4) {
+        float: right;
+        padding-top: 0;
+    }
 }
 
 .nav__item {
@@ -61,7 +70,7 @@ $color-nav: $color-link;
         background-color: lighten($grey, 5%);
     }
 
-    @include respond-min($bp3) {
+    @include respond-min($bp4) {
         display: inline-block;
         &.is-current .nav__link {
             background-color: inherit;
@@ -75,16 +84,27 @@ $color-nav: $color-link;
     display: block;
     color: $grey;
     padding: $base/2 $base;
+    font-weight: $weight-thin;
 
+    &:hover {
+        color: darken($grey , 10%);
+    }
     @include respond-min($bp3) {
+        font-size: 2rem;
+    }
+    @include respond-min($bp4) {
         text-align: left;
         position: relative;
-        font-size: 1.1rem;
+        color: $grey;
+        font-size: .85rem;
         padding: 0 $base/1.5;
     
         &:hover {
             color: darken($color-brand, 15%);
         }
+    }
+    @include respond-min($bp4) {
+       font-size: 1.1rem; 
     }
 }
 

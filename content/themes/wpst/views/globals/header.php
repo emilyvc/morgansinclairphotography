@@ -16,8 +16,7 @@
                 <?php foreach ($terms as $term ) { ?>
                     <li class="nav__item"><a class="nav__link" href="/project_type/<?php echo $term->slug; ?>"><?php echo $term->name; ?></a></li>
                 <?php } ?>
-                <li class="nav__item"><a class="nav__link" href="/about">About me</a></li>
-                <li class="nav__item"><a class="nav__link" href="/about">Contact</a></li>
+                <?php wp_nav_menu( array('theme_location' => 'primary', 'items_wrap' => '%3$s') ); ?>
             </ul>
         </nav>
 

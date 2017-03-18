@@ -15,7 +15,7 @@ if($gallery) :
 ?>
     <div class="slideshow">
         <?php foreach($gallery as $slide) : ?>
-            <img src="<?php echo $slide['gallery_image']['sizes']['gallery']; ?>" alt="<?php echo $slide['caption']; ?>" class="gallery__image">
+            <img src="<?php echo $slide['gallery_image']['url']; ?>" alt="" class="gallery__image">
         <?php endforeach; ?>
     </div>
 <?php endif; ?>

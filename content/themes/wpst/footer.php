@@ -1,20 +1,25 @@
+<?php 
+    $twitter = get_field('twitter' , 'options' );
+    $facebook = get_field('facebook' , 'options' );
+    $instagram = get_field('instagram' , 'options' );
+    $email = get_field('email' , 'options' );
+?>
+
 <footer>
     <div class="container">
         <ul class="list--unset | footer__icons">
-            <a href="https://www.instagram.com/jakefogarty"><li class="icon icon--medium icon--instagram"></li></a>
-            <a href="https://www.facebook.com/JFogartydrumtuition"><li class="icon icon--medium icon--facebook"></li></a>
-            <a href="https://www.youtube.com/channel/UClGiew31aRQYC3CDNg5wnOQ"><li class="icon icon--medium icon--youtube"></li></a>
+            <a href="https://www.instagram.com/<?php echo $instagram; ?>"><li class="icon icon--instagram"></li></a>
+            <a href="<?php echo $facebook; ?>"><li class="icon icon--facebook"></li></a>
+            <a href="https://twitter.com/<?php echo $twitter; ?>"><li class="icon icon--twitter"></li></a>
+            <a href="mailto:<?php echo $email; ?>" class="icon icon--mail">
+            </a>
         </ul>
-        <a href="mailto:fogartydrumsofficial@gmail.com" class="footer__contact">
-            <i class="icon icon--medium icon--mail | footer__item"></i>
-            <span class="footer__item | footer__text">Get in touch</span>
-        </a href="mailto:fogartydrumsoffical@gmail.com">
+        <p class="email u-zero-bottom"><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
+        
     </div>
 </footer>
 
 <?php wp_footer(); ?>
-
-<!-- With <3 from Mixd - http://mixd.co.uk -->
 
 </body>
 </html>

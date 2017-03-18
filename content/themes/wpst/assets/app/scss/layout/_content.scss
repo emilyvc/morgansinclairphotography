@@ -13,7 +13,10 @@
 \*----------------------------------------------------------------*/
 
 .content {
-    max-width: 850px;
+    padding-right: $base*2;
+    @include respond-min($bp4) {
+        padding-right: $base*6;
+    }
 
     > *:last-child {
         margin-bottom: 0;
@@ -23,10 +26,29 @@
     }
 }
 
+.side-content {
+    margin-top: $base*1.5;
+
+    @include respond-min($bp3) {
+        margin-top: 0;
+    }
+}
+
 .main {
     background-color: $grey-lighter;
 }
 
 .section {
-    padding: $base*2 0;
+    padding: $base*1.5 0;
+    @include respond-min($bp3) {
+        padding: $base*2 0;     
+    }
+}
+
+.section--large {
+    padding: 0 0 $base*3;   
+
+    @include respond-min($bp3) {
+        padding: $base 0 $base*3;     
+    }
 }

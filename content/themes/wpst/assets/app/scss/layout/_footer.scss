@@ -24,7 +24,10 @@ footer {
 
 
 .footer__icons {
-    float: right;
+    text-align: center; 
+    @include respond-min($bp3) {
+         float: right;
+    }
 
     li {
         margin-bottom: 0;
@@ -33,11 +36,17 @@ footer {
     a {
         margin-right: $base;
         margin-bottom: 0;
+        transition: all .35s ease;
+        opacity: .7;
 
         &:last-child {
             margin-right: 0;
         }
+        &:hover {
+            opacity: 1;
+        }
     }
+
 }
 
 .footer__contact {
@@ -48,23 +57,14 @@ footer {
     float: left;
 }
 
-.footer__text {
-    color: $white;
-    opacity: .6;
-    padding-left: $base;
-    text-transform: uppercase;
-    margin-top: $base/5;
-    display: none;
-
-    @include respond-min($bp2) {
-        display: block;
-    }
-}
-
 
 /* $. Copyright
 \*----------------------------------------------------------------*/
 
-.copyright {
+.email {
     @extend %cf;
+    text-align: center; 
+    @include respond-min($bp3) {
+         float: left;
+    }
 }
