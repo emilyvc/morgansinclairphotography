@@ -3,7 +3,7 @@
 ############################################
 
 set :stage, :production
-set :stage_url, "http://www.jfdrumtuition.com"
+set :stage_url, "http://www.morgansinclairphotography.com"
 server "188.166.170.87", user: "morgansinclairphotography", roles: %w{web app db}
 set :deploy_to, "/var/www/html/morgansinclairphotography.com"
 
