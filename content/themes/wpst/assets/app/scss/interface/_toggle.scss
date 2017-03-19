@@ -4,20 +4,23 @@
 
 .toggle {
     position: absolute;
-    top: $base*1.3;
-    right: $base*1.5;
+    top: $base;
+    right: $base;
     width: 25px;
     height: 25px;
     text-align: center;
     line-height: 25px;
     z-index: $z-index-5;
 
-
-    @include respond-min($bp3) {
+    @include respond-min($bp1) {
+        right: $base*2;
+    }
+    
+    @include respond-min($bp2) {
         top: $base*2;
         right: $base*3;
     }
-    @include respond-min($bp4) {
+    @include respond-min($bp5) {
         display: none;
     }
 }

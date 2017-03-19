@@ -17,10 +17,10 @@
     margin: 0 auto;
     width: 92.5%;
     min-width: 15em; // 240px
-    max-width: 78.5em; // 1233px
+    max-width: 85em; // 1233px
 
     @include respond-min($bp1) {
-        width: 85%;
+        width: 90%;
     }
 }
 

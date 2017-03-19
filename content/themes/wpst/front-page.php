@@ -18,7 +18,9 @@ get_header();
 
 ?>
 <main class="main">
-   <?php get_template_part('views/globals/project-loop'); ?>
+    <div class="container">
+        <?php get_template_part('views/globals/project-loop'); ?>
+   </div>
 </main>
 
 <?php get_footer(); ?>

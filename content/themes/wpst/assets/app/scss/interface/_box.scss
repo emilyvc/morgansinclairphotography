@@ -20,26 +20,27 @@
     background-size: cover;
     height: 24em;
     width: 100%;
-    @include respond-min($bp1) {
-        height: 19em;
+ 
+     @include respond-min($bp1) {
+        height: 15em;
     }
     @include respond-min($bp2) {
-        height: 28em;
-    }
-     @include respond-min($bp3) {
         height: 20em;
     }
-    @include respond-min($bp4) {
-        height: 19em;
+    @include respond-min($bp3) {
+        height: 17em;
     }
-      @include respond-min($bp5) {
-        height: 23em;
+    @include respond-min($bp4) {
+        &:hover {
+          .box__overlay {
+              opacity: .85;
+          }
     }
 
-  &:hover {
-    .box__overlay {
-        opacity: .85;
+    @include respond-min($bp5) {
+        height: 20em;
     }
+
   }
 }
 

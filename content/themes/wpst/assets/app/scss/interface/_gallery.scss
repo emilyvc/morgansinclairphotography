@@ -67,7 +67,17 @@
  }
 
 .gallery__nav-left {
-    right: 3%;
+    right: 10%;
+
+    @include respond-min($bp1) {
+        right: 8%;
+    }
+     @include respond-min($bp3) {
+        right: 5%;
+    }
+    @include respond-min($bp4) {
+        right: 3%;
+    }
 }
 .gallery__nav-right {
     right: 0;

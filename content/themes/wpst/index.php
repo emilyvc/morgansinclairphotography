@@ -28,7 +28,9 @@ get_header();
                     </article>
                 </div>
             </div>
-            <?php get_template_part('views/page/gallery/list'); ?>
+            <div class="container">
+                <?php get_template_part('views/page/gallery/list'); ?>
+            </div>
             <?php if(!is_single()): ?>
                 <div class="cms section section--large container">
                     <div class="grid">

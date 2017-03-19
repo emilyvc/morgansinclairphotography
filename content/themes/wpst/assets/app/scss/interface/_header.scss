@@ -40,9 +40,9 @@
     display: block;
     float: left;
     color: $color-brand;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 
-    @include respond-min($bp2) {
+    @include respond-min($bp1) {
         font-size: 1.8rem;
     }
     @include respond-min($bp2) {
@@ -80,7 +80,7 @@
         display: block;
     }
 
-    @include respond-min($bp4) {
+    @include respond-min($bp5) {
         display: block;
         position: static;
         top: auto;

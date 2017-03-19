@@ -5,7 +5,7 @@
 <a href="#navigation" class="is-hidden">Skip to Navigation</a>
 
 <header class="header">
-    <div class="container">
+    <div class="container cf">
         <a href="/" class="beta header__title" title="<?php bloginfo('name'); ?>">
             Morgan Sinclair Photography
         </a>
