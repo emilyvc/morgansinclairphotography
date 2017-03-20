@@ -34,15 +34,18 @@ get_header();
             <?php if(!is_single()): ?>
                 <div class="cms section section--large container">
                     <div class="grid">
-                        <div class="grid__item grid__item--7-12-bp3 | content">
+                        <div class="grid__item grid__item--6-12-bp3 | content">
                             <?php the_content(); ?>
                         </div>
-                        <div class="grid__item grid__item--5-12-bp3 | side-content">
+                        <div class="grid__item grid__item--6-12-bp3 | side-content">
                             <?php if(is_page('about')): ?>
                                 <?php $profile_image = get_field('profile_image', 'options'); ?>
                                 <?php if($profile_image): ?>
                                     <img src="<?php echo $profile_image['sizes']['project']; ?>" alt="">
                                 <?php endif; ?>
+                            <?php endif; ?>
+                            <?php if(is_page('contact')): ?>
+                                <?php echo do_shortcode( '[gravityform id="1" title="false" description="false"]' ); ?>
                             <?php endif; ?>
                         </div> 
                     </div>
