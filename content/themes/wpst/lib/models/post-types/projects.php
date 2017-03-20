@@ -25,7 +25,7 @@ function msp_post_type_projects() {
             'publicly_queryable' => true,
             'exclude_from_search' => false,
             'menu_position' => 5,
-            'menu_icon' => 'dashicons-unlock',
+            'menu_icon' => 'dashicons-camera',
             'query_var' => true,
             'rewrite' => array( 'slug' => 'projects', 'with_front' => false ),
             'supports' => array( 'title', 'page-attributes', 'revisions' ),
