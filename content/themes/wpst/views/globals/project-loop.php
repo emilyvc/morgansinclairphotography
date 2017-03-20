@@ -6,7 +6,7 @@ global $post;
 $qo = get_queried_object();
 $args = [
     'post_type'      => 'projects',
-    'posts_per_page' => 12,
+    'posts_per_page' => -1,
     'orderby'        => 'menu_order',
     'order'          => 'ASC',
     'post_status'    => 'publish'
