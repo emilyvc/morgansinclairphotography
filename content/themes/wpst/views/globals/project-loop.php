@@ -16,6 +16,10 @@ if ( is_a($qo, 'WP_Term') ) {
     $args['project_type'] = $qo->slug;
 }
 
+if ( is_archive() ) {
+    $args['posts_per_page'] = -1;
+}
+
 $projects = new WP_Query( $args );
 
 ?>
