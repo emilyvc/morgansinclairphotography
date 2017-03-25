@@ -116,11 +116,15 @@
 .gallery__nav-left,
 .gallery__nav-right {
     position: absolute;
-    top: 0;
+    top: 4em;
+
+    @include respond-min($bp1) {
+        top: 0;  
+    }
  }
 
 .gallery__nav-left {
-    right: 10%;
+    right: 50%;
 
     @include respond-min($bp1) {
         right: 8%;
@@ -133,7 +137,11 @@
     }
 }
 .gallery__nav-right {
-    right: 0;
+    right: 40%;
+
+    @include respond-min($bp1) {
+        right: 0;
+    }
 }
 
 .gallery__caption {
@@ -145,4 +153,9 @@
 
 .gallery__nav {
     position: relative;
+    margin-bottom: 3em;
+
+    @include respond-min($bp1) {
+        margin-bottom: 0;
+    }
 }
