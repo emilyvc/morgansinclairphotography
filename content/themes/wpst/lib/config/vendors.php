@@ -58,6 +58,8 @@ add_filter( 'gform_submit_button', 'wpst_gforms_submit_button', 10, 2 );
  * $. TinyMCE editor
  ******************************************************************************/
 
+
+
 // Modify TinyMCE editor to remove H1 tags
 function wpst_tinymce_specify_formats($init) {
     // Add block format elements you want to show in dropdown

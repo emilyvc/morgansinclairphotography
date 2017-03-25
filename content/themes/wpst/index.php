@@ -24,7 +24,7 @@ get_header();
             <div class="section">
                 <div class="container"> 
                     <article class="cms | gallery__nav">
-                        <h1 class="u-weight-normal"><?php the_title(); ?></h1>
+                        <h1 class="u-weight-normal u-align-center"><?php the_title(); ?></h1>
                     </article>
                 </div>
             </div>

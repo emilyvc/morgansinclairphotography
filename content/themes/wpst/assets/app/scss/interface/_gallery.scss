@@ -18,7 +18,60 @@
     @extend .list--unset;
 }
 
+.slideshow {
+    margin: 0 auto; 
+    width: 100%;
+}
 
+.portrait {
+    height: 50vh;
+    background-size: cover;
+
+    @include respond-min($bp1) {
+        height: 75vh;
+    }
+    @include respond-min($bp2) {
+        height: 54em;
+    }
+    @include respond-min($bp3) {
+        height: 32em;
+        width: 50%;
+        background-size: contain;
+    }
+    @include respond-min($bp4) {
+        height: 44em;
+    }
+    @include respond-min($bp5) {
+        height: 50em;
+    }
+}
+
+.landscape {
+     height: 18em;
+
+     @include respond-min($bp1) {
+        height: 30em;
+    }
+    @include respond-min($bp2) {
+        height: 39em;
+    }
+    @include respond-min($bp3) {
+        height: 41em;
+    }
+    @include respond-min($bp4) {
+        height: 49em;
+    }
+    @include respond-min($bp5) {
+        height: 67em;
+    }
+}
+
+.gallery__image {
+    background-size: cover;
+    background-repeat: no-repeat; 
+    margin: 0 auto;
+    
+}
 
 /* $. Elements
 \*----------------------------------------------------------------*/
