@@ -25,7 +25,7 @@ if ($imgmeta['width'] > $imgmeta['height']) {
 <?php if($gallery): ?>
     <div class="slideshow <?php echo $class; ?>">
             <?php foreach($gallery as $slide) : ?> 
-                <div class="gallery__image" style="background-image: url('<?php echo $slide['gallery_image']['sizes']['gallery']; ?>')">
+                <div class="gallery__image" style="background-image: url('<?php echo $slide['gallery_image']['url']; ?>')">
                 </div>
             <?php endforeach; ?>
     </div>
