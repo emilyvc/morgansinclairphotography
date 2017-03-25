@@ -10,11 +10,16 @@
  */
 
 $gallery = get_field('project_gallery');
+$imgmeta = '';
+$imgmeta['width'] = '';
+$imgmeta['height'] = '';
 
-foreach($gallery as $img):
-    $imgmeta = $img['gallery_image'];
-endforeach;
-
+if ($gallery):
+    $imgmeta = '';
+   foreach($gallery as $img):
+       $imgmeta = $img['gallery_image'];
+   endforeach;
+endif;
 
 if ($imgmeta['width'] > $imgmeta['height']) {
     $class = 'landscape';
